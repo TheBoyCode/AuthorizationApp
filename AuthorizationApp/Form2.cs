@@ -21,5 +21,12 @@ namespace AuthorizationApp
         {
             
         }
+
+        private void button_OK_Reg_Click(object sender, EventArgs e)
+        {
+            Close();
+            Form1 MainForm = new Form1();
+            MainForm.Show();
+        }
     }
 }

@@ -213,6 +213,7 @@
             this.button_OK_Reg.TabIndex = 12;
             this.button_OK_Reg.Text = "OK";
             this.button_OK_Reg.UseVisualStyleBackColor = true;
+            this.button_OK_Reg.Click += new System.EventHandler(this.button_OK_Reg_Click);
             // 
             // Form2
             // 

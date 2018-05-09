@@ -24,8 +24,10 @@ namespace AuthorizationApp
 
         private void button_Reg_Click(object sender, EventArgs e)
         {
+            Hide();
             Form2 RegistrationForm = new Form2();
             RegistrationForm.Show();
+            
         }
     }
 }
