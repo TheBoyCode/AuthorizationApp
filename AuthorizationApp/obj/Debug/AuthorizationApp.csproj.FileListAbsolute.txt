@@ -1,11 +1,13 @@
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\bin\Debug\AuthorizationApp.exe.config
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\bin\Debug\AuthorizationApp.exe
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\bin\Debug\AuthorizationApp.pdb
-C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csprojResolveAssemblyReference.cache
-C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.Form1.resources
-C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.Form2.resources
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.HomePage.resources
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.LoginForm.resources
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.StartForm.resources
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.RegistrationForm.resources
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.Properties.Resources.resources
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csproj.GenerateResource.cache
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.exe
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.pdb
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csprojResolveAssemblyReference.cache

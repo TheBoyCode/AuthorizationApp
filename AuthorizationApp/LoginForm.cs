@@ -10,23 +10,15 @@ using System.Windows.Forms;
 
 namespace AuthorizationApp
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void button_Log_Click(object sender, EventArgs e)
+        private void button_Login_OK_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void button_Reg_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Form2 RegistrationForm = new Form2();
-            RegistrationForm.Show();
             
         }
     }

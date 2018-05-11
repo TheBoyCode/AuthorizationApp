@@ -1,6 +1,6 @@
 ﻿namespace AuthorizationApp
 {
-    partial class Form1
+    partial class StartForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

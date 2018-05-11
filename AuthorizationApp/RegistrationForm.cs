@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace AuthorizationApp
 {
-    public partial class Form2 : Form
+    public partial class RegistrationForm : Form
     {
-        public Form2()
+        public RegistrationForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
             
         }
-
+        
         private void button_OK_Reg_Click(object sender, EventArgs e)
         {
+           RegistrationModel registrationModel = new RegistrationModel(textBox_name.Text,textBox_lastname.Text ,
+               textBox_login.Text , textBox_passw.Text , textBox_email.Text ,textBox_numb.Text);
+            registrationModel.Registration();
             Close();
-            Form1 MainForm = new Form1();
-            MainForm.Show();
         }
+        
     }
 }

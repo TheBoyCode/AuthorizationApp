@@ -1,6 +1,6 @@
 ﻿namespace AuthorizationApp
 {
-    partial class Form2
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -88,7 +88,6 @@
             this.label_name.Size = new System.Drawing.Size(229, 33);
             this.label_name.TabIndex = 0;
             this.label_name.Text = "Ім\'я";
-            this.label_name.Click += new System.EventHandler(this.label1_Click);
             // 
             // label_lastname
             // 
@@ -215,13 +214,13 @@
             this.button_OK_Reg.UseVisualStyleBackColor = true;
             this.button_OK_Reg.Click += new System.EventHandler(this.button_OK_Reg_Click);
             // 
-            // Form2
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form2";
+            this.Name = "RegistrationForm";
             this.Text = "Регістрація";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
