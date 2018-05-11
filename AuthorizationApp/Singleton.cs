@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AuthorizationApp
 {
-    class Singleton
+     class Singleton
     {
         private static Singleton instance;
         public User User { get; set; }
@@ -22,6 +22,10 @@ namespace AuthorizationApp
                 instance = new Singleton(user);
             }
             return instance;
+        }
+        public static void Delete ()
+        {
+            instance = null;  
         }
     }
 }

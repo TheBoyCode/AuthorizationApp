@@ -19,7 +19,9 @@ namespace AuthorizationApp
 
         private void button_LogOut_Click(object sender, EventArgs e)
         {
-
+            AurhorizationModel aurhorization = new AurhorizationModel();
+            aurhorization.LogOut();
+            Close();
         }
     }
 }

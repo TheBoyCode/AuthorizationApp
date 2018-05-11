@@ -9,12 +9,16 @@ namespace AuthorizationApp
 {
     class AurhorizationModel
     {
-       public string Login { get; set; }
+        private Singleton singleton;
+        public string Login { get; set; }
         public string Password { get; set; }
         public AurhorizationModel (string login, string password)
         {
             Login = login;
             Password = password;
+        }
+        public AurhorizationModel()
+        {
         }
         public bool Authorization()
         {
@@ -26,6 +30,7 @@ namespace AuthorizationApp
                 {
                     if (Data.Users[count].Login == Login && Data.Users[count].Password == Password)
                     {
+                       singleton = Singleton.getInstance(Data.Users[count]);
                         return true;
                     }
                     count++;
@@ -33,6 +38,10 @@ namespace AuthorizationApp
             }
             MessageBox.Show("Login or Password is wrong!");
             return false;
+        }
+        public void LogOut()
+        {
+            Singleton.Delete();
         }
     }
 }
