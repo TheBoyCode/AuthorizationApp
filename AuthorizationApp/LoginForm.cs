@@ -19,7 +19,12 @@ namespace AuthorizationApp
 
         private void button_Login_OK_Click(object sender, EventArgs e)
         {
-            
+            AurhorizationModel AurhorizationModel = new AurhorizationModel(Login_LogForm.Text, Password_LogForm.Text);
+            if ( AurhorizationModel.Authorization() )
+            {
+                HomePage homePage = new HomePage();
+                homePage.Show();
+            }
         }
     }
 }
