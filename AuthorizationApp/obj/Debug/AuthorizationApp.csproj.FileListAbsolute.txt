@@ -10,4 +10,3 @@ C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\Authori
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.exe
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.pdb
-C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csprojResolveAssemblyReference.cache

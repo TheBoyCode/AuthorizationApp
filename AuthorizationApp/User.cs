@@ -21,5 +21,6 @@ namespace AuthorizationApp
         public bool HaveGrand{ get; set; }
         public Gender Sex { get; set; }
         public string StudentTicket { get; set; }
+        public string Id { get; set; }
     }
 }

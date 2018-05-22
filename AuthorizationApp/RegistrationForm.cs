@@ -12,19 +12,20 @@ namespace AuthorizationApp
 {
     public partial class RegistrationForm : Form
     {
+        AccountService Service;
         public RegistrationForm()
         {
             InitializeComponent();
-            
         }
         
         private void button_OK_Reg_Click(object sender, EventArgs e)
         {
-           RegistrationModel registrationModel = new RegistrationModel(textBox_name.Text,textBox_lastname.Text ,
-               textBox_login.Text , textBox_passw.Text , textBox_email.Text ,textBox_numb.Text);
-            registrationModel.Registration();
-            Close();
+            Service = new AccountService();
         }
-        
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
