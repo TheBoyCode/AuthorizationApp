@@ -14,19 +14,25 @@ namespace AuthorizationApp
            
         }
 
-        public int Registration(string name, string lastname, string login, string passw,
-             string email, string numb, string course, string group, string fuculty, string university,
+        public void Registration(string name, string lastname, string login, string passw,
+             string email, string numb, string cours, string group, string faculty, string university,
              string haveGrand, string gender, string studentTicket)
         {
-            var IsValid = new ValidatorService( name, lastname, login,  passw,
-             email, numb, course,  group, fuculty,  university,
-              haveGrand,  gender,  studentTicket);
-            if (IsValid.Validation() != 0)
-            {
-                return IsValid.Validation();
-            }
-
-            else return 0;
+            User user = new User();
+            user.Name = name;
+            user.LastName = lastname;
+            user.Login = login;
+            user.Password = passw;
+            user.Email = email;
+            user.Number = numb;
+            user.Cours = Convert.ToInt32(cours);
+            user.Group = group;
+            user.Faculty = faculty;
+            user.University = university;
+            user.HaveGrand = Convert.ToBoolean(Convert.ToInt32(haveGrand));
+            user.Sex = (Gender)Convert.ToInt32(gender);
+            user.StudentTicket = studentTicket;
+            Data.Users.Add(user);
         }
     }
 }

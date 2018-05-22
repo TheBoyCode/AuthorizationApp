@@ -10,8 +10,13 @@ namespace AuthorizationApp
     {
         public enum Exeption
         {
-
+            login = 1,
+            password=2
         }
 
+        public static string  WhatException(int exp)
+        {
+            return " ";
+        }
     }
 }

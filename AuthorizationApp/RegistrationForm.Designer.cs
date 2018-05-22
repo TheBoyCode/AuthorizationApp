@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox_cours = new System.Windows.Forms.TextBox();
+            this.label_course = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
             this.label_lastname = new System.Windows.Forms.Label();
             this.label_numb = new System.Windows.Forms.Label();
@@ -49,13 +51,11 @@
             this.label_studentTicket = new System.Windows.Forms.Label();
             this.label_gender = new System.Windows.Forms.Label();
             this.textBox_group = new System.Windows.Forms.TextBox();
-            this.textBox_fuculty = new System.Windows.Forms.TextBox();
+            this.textBox_faculty = new System.Windows.Forms.TextBox();
             this.textBox_haveGrand = new System.Windows.Forms.TextBox();
             this.textBox_university = new System.Windows.Forms.TextBox();
             this.textBox_studentTicket = new System.Windows.Forms.TextBox();
             this.textBox_gender = new System.Windows.Forms.TextBox();
-            this.label_course = new System.Windows.Forms.Label();
-            this.textBox_course = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.5F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox_course, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_cours, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.label_course, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.label_name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_lastname, 0, 1);
@@ -86,7 +86,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label_studentTicket, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.label_gender, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.textBox_group, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox_fuculty, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.textBox_faculty, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.textBox_haveGrand, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.textBox_university, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.textBox_studentTicket, 1, 10);
@@ -112,6 +112,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(936, 615);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // textBox_cours
+            // 
+            this.textBox_cours.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.textBox_cours.Location = new System.Drawing.Point(307, 519);
+            this.textBox_cours.Name = "textBox_cours";
+            this.textBox_cours.Size = new System.Drawing.Size(428, 34);
+            this.textBox_cours.TabIndex = 26;
+            // 
+            // label_course
+            // 
+            this.label_course.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_course.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.label_course.Location = new System.Drawing.Point(5, 521);
+            this.label_course.Margin = new System.Windows.Forms.Padding(5, 5, 3, 0);
+            this.label_course.Name = "label_course";
+            this.label_course.Size = new System.Drawing.Size(296, 38);
+            this.label_course.TabIndex = 25;
+            this.label_course.Text = "Курс";
             // 
             // label_name
             // 
@@ -320,13 +339,13 @@
             this.textBox_group.Size = new System.Drawing.Size(428, 34);
             this.textBox_group.TabIndex = 19;
             // 
-            // textBox_fuculty
+            // textBox_faculty
             // 
-            this.textBox_fuculty.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.textBox_fuculty.Location = new System.Drawing.Point(307, 304);
-            this.textBox_fuculty.Name = "textBox_fuculty";
-            this.textBox_fuculty.Size = new System.Drawing.Size(428, 34);
-            this.textBox_fuculty.TabIndex = 20;
+            this.textBox_faculty.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
+            this.textBox_faculty.Location = new System.Drawing.Point(307, 304);
+            this.textBox_faculty.Name = "textBox_faculty";
+            this.textBox_faculty.Size = new System.Drawing.Size(428, 34);
+            this.textBox_faculty.TabIndex = 20;
             // 
             // textBox_haveGrand
             // 
@@ -359,25 +378,6 @@
             this.textBox_gender.Name = "textBox_gender";
             this.textBox_gender.Size = new System.Drawing.Size(428, 34);
             this.textBox_gender.TabIndex = 24;
-            // 
-            // label_course
-            // 
-            this.label_course.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_course.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
-            this.label_course.Location = new System.Drawing.Point(5, 521);
-            this.label_course.Margin = new System.Windows.Forms.Padding(5, 5, 3, 0);
-            this.label_course.Name = "label_course";
-            this.label_course.Size = new System.Drawing.Size(296, 38);
-            this.label_course.TabIndex = 25;
-            this.label_course.Text = "Курс";
-            // 
-            // textBox_course
-            // 
-            this.textBox_course.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold);
-            this.textBox_course.Location = new System.Drawing.Point(307, 519);
-            this.textBox_course.Name = "textBox_course";
-            this.textBox_course.Size = new System.Drawing.Size(428, 34);
-            this.textBox_course.TabIndex = 26;
             // 
             // RegistrationForm
             // 
@@ -416,12 +416,12 @@
         private System.Windows.Forms.Label label_studentTicket;
         private System.Windows.Forms.Label label_gender;
         private System.Windows.Forms.TextBox textBox_group;
-        private System.Windows.Forms.TextBox textBox_fuculty;
+        private System.Windows.Forms.TextBox textBox_faculty;
         private System.Windows.Forms.TextBox textBox_haveGrand;
         private System.Windows.Forms.TextBox textBox_university;
         private System.Windows.Forms.TextBox textBox_studentTicket;
         private System.Windows.Forms.TextBox textBox_gender;
         private System.Windows.Forms.Label label_course;
-        private System.Windows.Forms.TextBox textBox_course;
+        private System.Windows.Forms.TextBox textBox_cours;
     }
 }
