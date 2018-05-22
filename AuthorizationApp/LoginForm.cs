@@ -12,19 +12,37 @@ namespace AuthorizationApp
 {
     public partial class LoginForm : Form
     {
+        AccountService accountService;
+        bool IsTheUser;
         public LoginForm()
         {
             InitializeComponent();
+            accountService = new AccountService();
         }
 
         private void button_Login_OK_Click(object sender, EventArgs e)
         {
-            AurhorizationModel AurhorizationModel = new AurhorizationModel(Login_LogForm.Text, Password_LogForm.Text);
-            if ( AurhorizationModel.Authorization() )
+            IsTheUser = true;
+            TextBoxToWhite();
+            TextBoxToRed();
+            if(IsTheUser)
             {
-                HomePage homePage = new HomePage();
+                accountService.Authorization(Login_LogForm.Text.ToString(), Password_LogForm.Text.ToString());
+                var homePage = new HomePage();
                 homePage.Show();
+                Close();
             }
         }
+        private void TextBoxToWhite()
+        {
+            Login_LogForm.BackColor = Color.White;
+            Password_LogForm.BackColor = Color.White;
+        }
+        private void TextBoxToRed ()
+        {
+            if (!(ValidatorService.IsLogin(Login_LogForm.Text.ToString()))) { Login_LogForm.BackColor = Color.Red; IsTheUser = false; }
+            if (!(ValidatorService.IsPassword(Password_LogForm.Text.ToString(), Login_LogForm.Text.ToString()))) { Password_LogForm.BackColor = Color.Red; IsTheUser = false; }
+        }
+
     }
 }

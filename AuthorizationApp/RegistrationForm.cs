@@ -30,6 +30,7 @@ namespace AuthorizationApp
             if (!(IsException)) Service.Registration(textBox_name.Text.ToString(), textBox_lastname.Text.ToString(), textBox_login.Text.ToString(), textBox_passw.Text.ToString(),
                textBox_email.Text.ToString(), textBox_numb.Text.ToString(), textBox_cours.Text.ToString(), textBox_group.Text.ToString(), textBox_faculty.Text.ToString(), textBox_university.Text.ToString(),
                textBox_haveGrand.Text.ToString(), textBox_gender.Text.ToString(), textBox_studentTicket.Text.ToString());
+            if (!(IsException)) Close();
         }
 
         

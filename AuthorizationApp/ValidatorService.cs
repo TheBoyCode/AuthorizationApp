@@ -8,41 +8,7 @@ namespace AuthorizationApp
 {
    static class ValidatorService
     {
-        //public string name;
-        //public string lastname;
-        //public string login;
-        //public string passw;
-        //public string email;
-        //public string numb;
-        //public string course;
-        //public string group;
-        //public string fuculty;
-        //public string university;
-        //public string haveGrand;
-        //public string gender;
-        //public string studentTicket;
-
-
-
-    //    public ValidatorService(string name, string lastname, string login, string passw,
-    //         string email, string numb, string course, string group, string fuculty, string university,
-    //         string haveGrand, string gender, string studentTicket)
-    //    {
-    //       this.name=name;
-    //        this.lastname=lastname;
-    //        this.login=login;
-    //        this.passw=passw;
-    //        this.email=email;
-    //        this.numb=numb;
-    //        this.course=course;
-    //        this.group=group;
-    //        this.fuculty=fuculty;
-    //        this.university=university;
-    //        this.haveGrand=haveGrand;
-    //        this.gender=gender;
-    //        this.studentTicket=studentTicket;
-    //}
-       public static bool ValidStr(string name)
+        public static bool ValidStr(string name)
         {
             if (name == "") return false;
             else return true;
@@ -92,6 +58,27 @@ namespace AuthorizationApp
         {
             if (!(Regex.IsMatch(cours, @"^[1-6]{1,1}$"))) return false;
             return true;
+        }
+
+        public static bool IsLogin(string login)
+        {
+            foreach( User  el in Data.Users )
+            {
+                if (el.Login == login)
+                    return true;
+            }
+            return false;
+        }
+        public static bool IsPassword(string password,string login)
+        {
+            foreach (User el in Data.Users)
+            {
+                if (el.Login == login)
+                {
+                    if (el.Password == password) return true;
+                }
+            }
+            return false;
         }
     }
 }

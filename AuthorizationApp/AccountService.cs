@@ -34,5 +34,15 @@ namespace AuthorizationApp
             user.StudentTicket = studentTicket;
             Data.Users.Add(user);
         }
+
+        public void Authorization(string login, string password)
+        {
+            User user=new User();
+            foreach (User el in Data.Users)
+            {
+                if (el.Login == login && el.Password == password) user = el;
+            }
+            var singleton = Singleton.getInstance(user);
+        }
     }
 }
