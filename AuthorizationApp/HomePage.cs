@@ -23,5 +23,11 @@ namespace AuthorizationApp
             aurhorization.LogOut();
             Close();
         }
+
+        private void button_Edit_Click(object sender, EventArgs e)
+        {
+           var editForm = new EditForm();
+            editForm.Show();
+        }
     }
 }

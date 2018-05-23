@@ -11,3 +11,7 @@ C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\Authori
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.exe
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.pdb
 C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.csproj.CopyComplete
+C:\Users\User\Desktop\Curses\AuthorizationApp\AuthorizationApp\obj\Debug\AuthorizationApp.EditForm.resources

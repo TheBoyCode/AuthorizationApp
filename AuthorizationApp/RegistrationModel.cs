@@ -9,23 +9,18 @@ namespace AuthorizationApp
 {
     class RegistrationModel
     {
-        private User user;
-     
-        public RegistrationModel(User user)
-        {
-            this.user = user;
-            
-        }
-        public bool  ValidationOfRegistration(User user)
-        {
-            foreach (User el in Data.Users)
-            {
-                if (el.Login == user.Login) return false;
-
-            }
-
-
-            return true;
-        }
+            public  string name { get; set; }
+            public string lastname { get; set; }
+            public string login { get; set; }
+            public string passw { get; set; }
+            public string email { get; set; }
+            public string numb { get; set; }
+            public string cours { get; set; }
+            public string group { get; set; }
+            public string faculty { get; set; }
+            public string university { get; set; }
+            public string haveGrand { get; set; }
+            public string gender { get; set; }
+            public string studentTicket { get; set; }
     }
 }

@@ -53,8 +53,6 @@ namespace AuthorizationApp
 
         private void FindException()
         {
-           
-
             if (!(ValidatorService.ValidLogin(textBox_login.Text.ToString()))) { IsException = true; textBox_login.BackColor = Color.Red; }
             if (!(ValidatorService.ValidName(textBox_lastname.Text.ToString()))) { textBox_lastname.BackColor = Color.Red; IsException = true; }
             if (!(ValidatorService.ValidName(textBox_name.Text.ToString()))) { textBox_name.BackColor = Color.Red; IsException = true; }
@@ -68,9 +66,7 @@ namespace AuthorizationApp
             if (!(ValidatorService.ValidStudentTicket(textBox_studentTicket.Text.ToString()))) { textBox_studentTicket.BackColor = Color.Red; IsException = true; }
             if (!(ValidatorService.ValidGender(textBox_gender.Text.ToString()))) { textBox_gender.BackColor = Color.Red; IsException = true; }
             if (!(ValidatorService.ValidCours(textBox_cours.Text.ToString()))) { textBox_cours.BackColor = Color.Red; IsException = true; }
-
-
-        }
+   }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

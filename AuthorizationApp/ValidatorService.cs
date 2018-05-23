@@ -62,7 +62,8 @@ namespace AuthorizationApp
 
         public static bool IsLogin(string login)
         {
-            foreach( User  el in Data.Users )
+            Data.ReadFromFile();
+            foreach ( User  el in Data.Users )
             {
                 if (el.Login == login)
                     return true;
@@ -71,6 +72,7 @@ namespace AuthorizationApp
         }
         public static bool IsPassword(string password,string login)
         {
+            Data.ReadFromFile();
             foreach (User el in Data.Users)
             {
                 if (el.Login == login)
