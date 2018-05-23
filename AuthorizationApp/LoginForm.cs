@@ -27,7 +27,7 @@ namespace AuthorizationApp
             TextBoxToRed();
             if(IsTheUser)
             {
-                accountService.Authorization(Login_LogForm.Text.ToString(), Password_LogForm.Text.ToString());
+                accountService.Authorization(CreateLogModel());
                 var homePage = new HomePage();
                 homePage.Show();
                 Close();
@@ -42,6 +42,13 @@ namespace AuthorizationApp
         {
             if (!(ValidatorService.IsLogin(Login_LogForm.Text.ToString()))) { Login_LogForm.BackColor = Color.Red; IsTheUser = false; }
             if (!(ValidatorService.IsPassword(Password_LogForm.Text.ToString(), Login_LogForm.Text.ToString()))) { Password_LogForm.BackColor = Color.Red; IsTheUser = false; }
+        }
+        private AurhorizationModel CreateLogModel()
+        {
+            AurhorizationModel model = new AurhorizationModel();
+            model.Login = Login_LogForm.Text;
+            model.Password = Password_LogForm.Text;
+            return model;
         }
 
     }

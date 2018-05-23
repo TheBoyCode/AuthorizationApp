@@ -27,10 +27,11 @@ namespace AuthorizationApp
             IsException = false;
             ToWhiteTextBox();
             FindException();
-            if (!(IsException)) Service.Registration(textBox_name.Text.ToString(), textBox_lastname.Text.ToString(), textBox_login.Text.ToString(), textBox_passw.Text.ToString(),
-               textBox_email.Text.ToString(), textBox_numb.Text.ToString(), textBox_cours.Text.ToString(), textBox_group.Text.ToString(), textBox_faculty.Text.ToString(), textBox_university.Text.ToString(),
-               textBox_haveGrand.Text.ToString(), textBox_gender.Text.ToString(), textBox_studentTicket.Text.ToString());
-            if (!(IsException)) Close();
+            if (!(IsException))
+            {
+                Service.Registration(CreateRedistModel());
+                Close();
+            }
         }
 
         
@@ -67,6 +68,25 @@ namespace AuthorizationApp
             if (!(ValidatorService.ValidGender(textBox_gender.Text.ToString()))) { textBox_gender.BackColor = Color.Red; IsException = true; }
             if (!(ValidatorService.ValidCours(textBox_cours.Text.ToString()))) { textBox_cours.BackColor = Color.Red; IsException = true; }
    }
+
+        private RegistrationModel CreateRedistModel()
+        {
+            RegistrationModel model = new RegistrationModel();
+            model.cours = textBox_cours.Text;
+            model.email = textBox_email.Text;
+            model.faculty = textBox_faculty.Text;
+            model.gender = textBox_gender.Text;
+            model.group = textBox_group.Text;
+            model.haveGrand = textBox_haveGrand.Text;
+            model.lastname = textBox_lastname.Text;
+            model.login = textBox_login.Text;
+            model.name = textBox_name.Text;
+            model.numb = textBox_numb.Text;
+            model.passw = textBox_passw.Text;
+            model.studentTicket = textBox_studentTicket.Text;
+            model.university = textBox_university.Text;
+            return model;
+        }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

@@ -14,36 +14,34 @@ namespace AuthorizationApp
            
         }
 
-        public void Registration(string name, string lastname, string login, string passw,
-             string email, string numb, string cours, string group, string faculty, string university,
-             string haveGrand, string gender, string studentTicket)
+        public void Registration(RegistrationModel model )
         {
             User user = new User();
-            user.Name = name;
-            user.LastName = lastname;
-            user.Login = login;
-            user.Password = passw;
-            user.Email = email;
-            user.Number = numb;
-            user.Cours = Convert.ToInt32(cours);
-            user.Group = group;
-            user.Faculty = faculty;
-            user.University = university;
-            user.HaveGrand = Convert.ToBoolean(Convert.ToInt32(haveGrand));
-            user.Sex = (Gender)Convert.ToInt32(gender);
-            user.StudentTicket = studentTicket;
+            user.Name = model.name;
+            user.LastName = model.lastname;
+            user.Login = model.login;
+            user.Password = model.passw;
+            user.Email = model.email;
+            user.Number = model.numb;
+            user.Cours = Convert.ToInt32(model.cours);
+            user.Group = model.group;
+            user.Faculty = model.faculty;
+            user.University = model.university;
+            user.HaveGrand = Convert.ToBoolean(Convert.ToInt32(model.haveGrand));
+            user.Sex = (Gender)Convert.ToInt32(model.gender);
+            user.StudentTicket = model.studentTicket;
             user.Id = Guid.NewGuid().ToString();
             Data.ReadFromFile();
             Data.Users.Add(user);
             Data.WriteToFile();
         }
 
-        public void Authorization(string login, string password)
+        public void Authorization(AurhorizationModel model)
         {
             Data.ReadFromFile();
             foreach (User el in Data.Users)
             {
-                if (el.Login == login && el.Password == password)
+                if (el.Login == model.Login && el.Password == model.Password)
                 {
                     var singleton = Singleton.getInstance(el);
                 }
