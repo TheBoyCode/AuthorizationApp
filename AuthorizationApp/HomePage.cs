@@ -21,6 +21,8 @@ namespace AuthorizationApp
         {
             AurhorizationModel aurhorization = new AurhorizationModel();
             aurhorization.LogOut();
+
+
             Close();
         }
 
