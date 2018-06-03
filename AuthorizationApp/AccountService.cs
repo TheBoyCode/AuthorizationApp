@@ -28,9 +28,8 @@ namespace AuthorizationApp
         }
 
 
-        public void Edition(RegistrationModel model)
+        public void Edition(EditionModel model)
         {
-            User user = new User();
             Singleton singleton = Singleton.getInstance();
             singleton.userModel.cours = Convert.ToInt32(model.cours);
             singleton.userModel.email = model.email;
@@ -44,7 +43,8 @@ namespace AuthorizationApp
             singleton.userModel.gender = Convert.ToInt32(model.gender);
             singleton.userModel.studentTicket = model.studentTicket;
             singleton.userModel.university = model.university;
-           
+            singleton.EditDB(model);
+
         }
     }
 }

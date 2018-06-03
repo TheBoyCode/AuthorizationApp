@@ -29,7 +29,7 @@ namespace AuthorizationApp
             if(IsWhite())
             {
                var accountService = new AccountService();
-               accountService.Edition(CreateRegisterModel());
+               accountService.Edition(CreateEditModel());
                 Close();
             }
         }
@@ -226,9 +226,11 @@ namespace AuthorizationApp
             if(textBox_Edit_Name.BackColor == Color.Red)return false;
             return true;
         }
-        private RegistrationModel CreateRegisterModel()
+        private EditionModel CreateEditModel()
         {
-           var model  =new RegistrationModel();
+            var model  =new EditionModel();
+            var singleton = Singleton.getInstance();
+            model.login = singleton.userModel.login;
             model.cours = textBox_Edit_Cours.Text;
             model.email = textBox_Edit_Email.Text;
             model.faculty = textBox_Edit_Faculty.Text;

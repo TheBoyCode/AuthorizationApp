@@ -130,5 +130,31 @@ namespace AuthorizationApp
             cmdW.ExecuteNonQuery();
 
         }
+
+        public void EditDB(EditionModel editionModel)
+        {
+            string info = @"UPDATE u SET name = '"+editionModel.name+"'," +
+                "lastname='"+ editionModel.lastname + "',password= '"+ editionModel .passw+"',"+
+                "course= '" + editionModel.cours + "'," + "faculty= '" + editionModel.faculty + "'," +
+                "email= '" + editionModel.email + "'," + "numberphone= '" + editionModel.numb + "'," +
+                "groupe= '" + editionModel.group + "'," + "university= '" + editionModel.university + "'," +
+                "sex= '" + editionModel.gender + "'," + "studentticket= '" + editionModel.studentTicket + "' " +
+                " WHERE login = '" +editionModel.login+"';";
+            string connstring = String.Format("Server=127.0.0.1;Port=5432 ;" +
+                "User Id=postgres;Password=root;Database=application;");
+            NpgsqlConnection conn = new NpgsqlConnection(connstring);
+            try
+            {
+                conn.Open();
+            }
+            catch
+            {
+                conn.Close();
+            }
+            string id = Guid.NewGuid().ToString();
+            NpgsqlCommand cmdW = new NpgsqlCommand(info, conn);
+            cmdW.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
