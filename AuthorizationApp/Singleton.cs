@@ -105,7 +105,6 @@ namespace AuthorizationApp
 
 
         }
-
         public  void WriteToDB(RegistrationModel registrationModel)
         {
             string connstring = String.Format("Server=127.0.0.1;Port=5432 ;" +
@@ -130,7 +129,6 @@ namespace AuthorizationApp
             cmdW.ExecuteNonQuery();
 
         }
-
         public void EditDB(EditionModel editionModel)
         {
             string info = @"UPDATE u SET name = '"+editionModel.name+"'," +

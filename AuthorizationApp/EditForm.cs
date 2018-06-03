@@ -19,13 +19,9 @@ namespace AuthorizationApp
             AllIsRed = 0;
             InitializeComponent();
             CheakFiled();
-            
         }
-
         private void button_Save_Click(object sender, EventArgs e)
         {
-            //IsException = false;
-           
             if(IsWhite())
             {
                var accountService = new AccountService();
@@ -33,7 +29,6 @@ namespace AuthorizationApp
                 Close();
             }
         }
-        
         private void EditForm_Load(object sender, EventArgs e)
         {
             User user = new User();
@@ -208,7 +203,6 @@ namespace AuthorizationApp
             };
             
         }
-
         private bool IsWhite()
         {
             if (textBox_Edit_Cours.BackColor == Color.Red) return false;
