@@ -37,19 +37,19 @@ namespace AuthorizationApp
         private void EditForm_Load(object sender, EventArgs e)
         {
             User user = new User();
-            Singleton singleton = Singleton.getInstance(user);
-            textBox_Edit_University.Text = singleton.User.University;
-            textBox_Edit_StudentTicket.Text = singleton.User.StudentTicket;
-            textBox_Edit_Cours.Text = Convert.ToString(singleton.User.Cours);
-            textBox_Edit_Password.Text = singleton.User.Password;
-            textBox_Edit_Number.Text = singleton.User.Number;
-            textBox_Edit_Email.Text = singleton.User.Email;
-            textBox_Edit_Faculty.Text = singleton.User.Faculty;
-            textBox_Edit_Gender.Text = Convert.ToString(Convert.ToInt32(singleton.User.Sex));
-            textBox_Edit_Group.Text = singleton.User.Group;
-            textBox_Edit_HaveGrand.Text = Convert.ToString(Convert.ToInt32(singleton.User.HaveGrand));
-            textBox_Edit_LastName.Text = singleton.User.LastName;
-            textBox_Edit_Name.Text = singleton.User.Name;
+            Singleton singleton = Singleton.getInstance();
+            textBox_Edit_University.Text = singleton.userModel.university;
+            textBox_Edit_StudentTicket.Text = singleton.userModel.studentTicket;
+            textBox_Edit_Cours.Text = Convert.ToString(singleton.userModel.cours);
+            textBox_Edit_Password.Text = singleton.userModel.passw;
+            textBox_Edit_Number.Text = singleton.userModel.numb;
+            textBox_Edit_Email.Text = singleton.userModel.email;
+            textBox_Edit_Faculty.Text = singleton.userModel.faculty;
+            textBox_Edit_Gender.Text = Convert.ToString(Convert.ToInt32(singleton.userModel.gender));
+            textBox_Edit_Group.Text = singleton.userModel.group;
+            textBox_Edit_HaveGrand.Text = Convert.ToString(Convert.ToInt32(singleton.userModel.haveGrand));
+            textBox_Edit_LastName.Text = singleton.userModel.lastname;
+            textBox_Edit_Name.Text = singleton.userModel.name;
         }
         private void CheakFiled()
         {

@@ -20,25 +20,7 @@ namespace AuthorizationApp
         public AurhorizationModel()
         {
         }
-        public bool Authorization()
-        {
-            if (Login == "" || Password == "") MessageBox.Show("Fill in textbox!");
-            else
-            {
-                int count = 0;
-                foreach (User element in Data.Users)
-                {
-                    if (Data.Users[count].Login == Login && Data.Users[count].Password == Password)
-                    {
-                       singleton = Singleton.getInstance(Data.Users[count]);
-                        return true;
-                    }
-                    count++;
-                }
-            }
-            MessageBox.Show("Login or Password is wrong!");
-            return false;
-        }
+       
         public void LogOut()
         {
             Singleton.Delete();

@@ -15,7 +15,7 @@ namespace AuthorizationApp
         public StartForm()
         {
             InitializeComponent();
-            Data.Users = new List<User>();
+           
         }
 
         private void button_Log_Click(object sender, EventArgs e)

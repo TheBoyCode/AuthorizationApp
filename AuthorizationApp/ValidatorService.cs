@@ -33,11 +33,8 @@ namespace AuthorizationApp
         {
             if (login == "") return false;
             if (!(Regex.IsMatch(login, "^[a-zA-Z0-9]+$"))) return false;
-            foreach (User el in Data.Users)
-            {
-                if (el.Login == login) return false;
-            }
-             return true;
+            if (IsLogin(login)) return true;
+            return false;
         }
         public static bool ValidHaveGrand(string haveGrand)
         {
@@ -62,24 +59,13 @@ namespace AuthorizationApp
 
         public static bool IsLogin(string login)
         {
-            Data.ReadFromFile();
-            foreach ( User  el in Data.Users )
-            {
-                if (el.Login == login)
-                    return true;
-            }
+            if (Singleton.IsLogin(login)) return true;
+           
             return false;
         }
         public static bool IsPassword(string password,string login)
         {
-            Data.ReadFromFile();
-            foreach (User el in Data.Users)
-            {
-                if (el.Login == login)
-                {
-                    if (el.Password == password) return true;
-                }
-            }
+            if (Singleton.IsLogin(login)) return true;
             return false;
         }
     }
