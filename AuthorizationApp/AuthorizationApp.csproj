@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AccountService.cs" />
     <Compile Include="AurhorizationModel.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
     </Compile>

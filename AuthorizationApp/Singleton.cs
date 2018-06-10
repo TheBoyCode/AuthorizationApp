@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Npgsql;
 namespace AuthorizationApp
 {
-     class Singleton
+    class Singleton
     {
         public UserModel userModel;
         private static Singleton instance=null;
